@@ -1,0 +1,23 @@
+{% extends 'layouts/generic-py-base.html' %}
+
+{% block head %}
+  {{ super() }}
+  <!--[if lt IE 9]>
+    <script src="{{ static('scripts/ie.min.js') }}" type="text/javascript"></script>
+  <![endif]-->
+{% endblock %}
+
+{% block global_subheader_container %}
+  {% if self.global_subheader() %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
+
+{% block main_js %}
+  <script src="{{ static('scripts/libs.min.js') }}"></script>
+  <script src="{{ static('scripts/moj.js') }}"></script>
+{% endblock %}
+
+{% block template_type %}internal{% endblock %}
+
+{% block support_links %}{% endblock %}
