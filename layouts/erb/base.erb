@@ -14,7 +14,7 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
     <!--[if lt IE 9]>
-      <%= javascript_include_tag 'scripts/ie.min.js' %>
+      <%= javascript_include_tag 'polyfills.bundle' %>
     <![endif]-->
   </head>
   <body>
@@ -98,7 +98,7 @@
       </div>
     </div>
 
-    <%= javascript_include_tag 'scripts/libs.min', 'scripts/moj-sprockets' %>
+    <%= javascript_include_tag 'app.bundle' %>
     <% if content_for? :include_js %>
       <% if defined? yield_content %>
         <%= javascript_include_tag(yield_content :include_js) %>
