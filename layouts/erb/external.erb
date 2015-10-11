@@ -1,0 +1,12 @@
+<% content_for :template_type, 'external' %>
+
+<% content_for :govuk_logo do %>
+  <div class="header-branding">
+    <a href="https://www.gov.uk" title="Go to the GOV.UK homepage" class="header-logo">
+      <%= image_tag('images/crown-logo-black-2x.png') %>
+      <span>GOV.UK</span>
+    </a>
+  </div>
+<% end %>
+
+<%= render template: 'layouts/erb/base' %>
