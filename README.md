@@ -1,6 +1,6 @@
 # Mojular templates
 
-A collection of base layout templates for a multiple languages (ERB, Django, Jinja) as well as commong Jinja macros and Rails/Padrino partials.
+A collection of base layout templates for multiple template languages (ERB, Django, Jinja). Also common Jinja macros and Rails/Padrino partials.
 
 ## Installation
 
