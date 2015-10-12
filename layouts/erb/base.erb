@@ -18,45 +18,46 @@
     <![endif]-->
   </head>
   <body>
-    <div id="global-cookie-message">
-      <div class="container">
-        <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about
-          cookies</a></p>
-      </div>
-    </div>
-    <div class="global-header">
-      <div class="container">
-        <div class="skip-link">
-          <a href="#content">Skip to main content</a>
+    <header>
+      <div id="global-cookie-message">
+        <div class="container">
+          <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about
+            cookies</a></p>
         </div>
-        <% if content_for? :govuk_logo %>
-          <%= (defined? yield_content) ? yield_content(:govuk_logo) : yield(:govuk_logo) %>
-        <% end %>
-        <% if content_for? :proposition %>
-          <a href="#proposition-links" class="header-menu-toggle"></a>
-          <div class="header-proposition">
+      </div>
+      <div class="global-header">
+        <div class="container">
+          <div class="skip-link">
+            <a href="#content">Skip to main content</a>
+          </div>
+          <% if content_for? :govuk_logo %>
+            <%= (defined? yield_content) ? yield_content(:govuk_logo) : yield(:govuk_logo) %>
+          <% end %>
+          <% if content_for? :proposition %>
+            <a href="#proposition-links" class="header-menu-toggle"></a>
+            <div class="header-proposition">
+              <% if defined? yield_content %>
+                <%= yield_content :proposition %>
+              <% else %>
+                <%= yield :proposition %>
+              <% end %>
+            </div>
+          <% end %>
+          <div class="header-bar"></div>
+        </div>
+      </div>
+      <% if content_for? :global_subheader %>
+        <div class="global-subheader">
+          <div class="container">
             <% if defined? yield_content %>
-              <%= yield_content :proposition %>
+              <%= yield_content :global_subheader %>
             <% else %>
-              <%= yield :proposition %>
+              <%= yield :global_subheader %>
             <% end %>
           </div>
-        <% end %>
-        <div class="header-bar"></div>
-      </div>
-    </div>
-
-    <% if content_for? :global_subheader %>
-      <div class="global-subheader">
-        <div class="container">
-          <% if defined? yield_content %>
-            <%= yield_content :global_subheader %>
-          <% else %>
-            <%= yield :global_subheader %>
-          <% end %>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+     </header>
 
     <main id="content" class="main-content" role="main">
       <div class="container">
@@ -64,7 +65,7 @@
       </div>
     </main>
 
-    <div class="global-footer">
+    <footer class="global-footer">
       <div class="container">
         <div class="support-links">
           <% if content_for? :support_links %>
@@ -96,7 +97,7 @@
           <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown copyright</a>
         </div>
       </div>
-    </div>
+    </footer>
 
     <%= javascript_include_tag 'app.bundle' %>
     <% if content_for? :include_js %>
