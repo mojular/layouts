@@ -73,9 +73,13 @@
           <% else %>
             <h2 class="u-vh">Support links</h2>
             <ul>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/cookies">Cookies</a></li>
-              <li><a href="/feedback">Feedback</a></li>
+              <% if content_for? :support_links_items %>
+                <%= (defined? yield_content) ? yield_content(:support_links) : yield(:support_links) %>
+              <% else %>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/cookies">Cookies</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+              <% endif %>
               <li>
                 Built by
                 <a href="https://mojdigital.blog.gov.uk/">
