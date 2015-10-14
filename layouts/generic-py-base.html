@@ -51,9 +51,11 @@
           {% block support_links %}
             <h2 class="u-vh">Support links</h2>
             <ul>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/cookies">Cookies</a></li>
-              <li><a href="/feedback">Feedback</a></li>
+              {% block support_links_items %}
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/cookies">Cookies</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+              {% endblock %}
               <li>
                 Built by
                 <a href="https://mojdigital.blog.gov.uk/">
