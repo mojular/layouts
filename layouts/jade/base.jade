@@ -1,0 +1,64 @@
+doctype html
+html(lang='en' class='no-js')
+  head
+    meta(http-equiv='content-type' content='text/html; charset=UTF-8')
+    title
+      block page_title
+        | GOV.UK - The best place to find government services and information
+    script
+      | (function(d){d.className=d.className.replace(/\bno-js\b/,'js-enabled')})(document.documentElement);
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    block stylesheets
+    block head
+  body
+    header
+      #global-cookie-message
+        .container
+          p GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about
+            cookies</a>
+      .global-header
+        .container
+          .skip-link
+            a(href='#content') Skip to main content
+          block govuk_logo
+            .header-branding
+              a.header-logo(href='https://www.gov.uk' title='Go to the GOV.UK homepage')
+                img(src='/images/crown-logo-black-2x.png' alt='')
+                span GOV.UK
+          a(href='#proposition-links' class='header-menu-toggle')
+          .header-proposition
+            block proposition
+            .header-bar
+      block global_subheader_container
+        .global-subheader
+          .container
+            block global_subheader
+            
+    main#content.main-content(role='main')
+      .container
+        block content
+          
+    
+    footer.global-footer
+      .container
+        .support-links
+          block support_links
+            h2.u-vh Support links
+            ul
+              block support_links_items
+                li: a(href='/privacy') Privacy Policy
+                li: a(href='/cookies') Cookies
+                li: a(href='/feedback') Feedback
+              li: Built by <a href='https://mojdigital.blog.gov.uk/'><abbr title="Ministry of Justice">MOJ</abbr> Digital</a>
+            .open-government-licence
+              a.ogl-logo(href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/') Open Government Licence
+              |  All content is available under the
+              a(href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/') Open Government Licence v3.0
+              |  except where otherwise stated
+        .copyright
+          a(href='https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm')© Crown copyright
+    
+    block before_main_js
+    block main_js
+      script(src='javascripts/app.bundle.js')
+    block after_main_js
