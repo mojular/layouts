@@ -12,6 +12,8 @@ npm install https://github.com/mojular/templates/tarball/master --save
 
 ## Usage
 
+See [examples](https://github.com/mojular/examples) of using templates with different frameworks.
+
 ### Django
 
 For version *>=1.8* add the path to your `TEMPLATES` list in the settings file:
