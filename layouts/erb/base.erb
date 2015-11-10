@@ -74,7 +74,15 @@
 
     <main id="content" class="main-content" role="main">
       <div class="container">
-        <%= yield %>
+        <% if content_for?(:content) %>
+          <% if defined? yield_content %>
+            <%= yield_content :content %>
+          <% else %>
+            <%= yield :content %>
+          <% end %>
+        <% else %>
+          <%= yield %>
+        <% end %>
       </div>
     </main>
 
