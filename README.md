@@ -59,7 +59,7 @@ Then extend your templates from Mojular base template.
 Add the following to `app/controllers/application_controller.rb`
 
 ```ruby
-layout 'erb/external'
+layout 'erb/base'
 
 prepend_view_path(File.expand_path("#{Rails.root.to_s}/node_modules/mojular-templates"))
 ```
