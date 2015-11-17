@@ -7,7 +7,7 @@ A collection of base layout templates for multiple template languages (ERB, Djan
 Add as depencency to your project’s `package.json`:
 
 ```
-npm install https://github.com/mojular/templates/tarball/master --save
+npm install mojular/templates --save
 ```
 
 ## Usage
