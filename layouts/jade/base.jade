@@ -33,12 +33,11 @@ html(lang='en' class='no-js')
         .global-subheader
           .container
             block global_subheader
-            
+
     main#content.main-content(role='main')
       .container
         block content
-          
-    
+
     footer.global-footer
       .container
         .support-links
@@ -49,15 +48,16 @@ html(lang='en' class='no-js')
                 li: a(href='/privacy') Privacy Policy
                 li: a(href='/cookies') Cookies
                 li: a(href='/feedback') Feedback
-              li: Built by <a href='https://mojdigital.blog.gov.uk/'><abbr title="Ministry of Justice">MOJ</abbr> Digital</a>
+              block author
+                li: Built by <a href='https://mojdigital.blog.gov.uk/'><abbr title="Ministry of Justice">MOJ</abbr> Digital</a>
             .open-government-licence
               a.ogl-logo(href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/') Open Government Licence
-              |  All content is available under the
+              |  All content is available under the #{''}
               a(href='https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/') Open Government Licence v3.0
               |  except where otherwise stated
         .copyright
           a(href='https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm')© Crown copyright
-    
+
     block before_main_js
     block main_js
       script(src='javascripts/app.bundle.js')

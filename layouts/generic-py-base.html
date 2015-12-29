@@ -56,12 +56,14 @@
                 <li><a href="/cookies">Cookies</a></li>
                 <li><a href="/feedback">Feedback</a></li>
               {% endblock %}
-              <li>
-                Built by
-                <a href="https://mojdigital.blog.gov.uk/">
-                  <abbr title="Ministry of Justice">MOJ</abbr> Digital
-                </a>
-              </li>
+              {% block author %}
+                <li>
+                  Built by
+                  <a href="https://mojdigital.blog.gov.uk/">
+                    <abbr title="Ministry of Justice">MOJ</abbr> Digital
+                  </a>
+                </li>
+              {% endblock %}
             </ul>
             <div class="open-government-licence">
               <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" class="ogl-logo">
