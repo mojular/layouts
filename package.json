@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/mojular/templates#readme",
   "dependencies": {
-    "mojular": "^0.2"
+    "mojular": "^0.2.2"
   }
 }
